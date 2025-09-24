@@ -1,4 +1,4 @@
-# Projeto Master-Detail Django - Carros
+# Projeto Loja de Produtos
 
 Aplicação Django simples para listar e visualizar detalhes de carros.
 
@@ -22,3 +22,4 @@ Aplicação Django simples para listar e visualizar detalhes de carros.
 ### pip install -r requirements.txt
 ### git clone https://github.com/imalexcode/Master-Detail-Django-Carro-.git
    
+
