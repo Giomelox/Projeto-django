@@ -1,6 +1,6 @@
 # Projeto-django
 
-# Nome do Aluno: Giovanni Melo Abud
+## Nome do Aluno: Giovanni Melo Abud
 
 Acima contém arquivos de um projeto django rodando em um ambiente virtual.
 
