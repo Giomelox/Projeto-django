@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Detalhes do Produto</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container py-4">
+  <a href="{% url 'app:home' %}" class="btn btn-outline-secondary mb-3">&larr; Voltar</a>
+
+  <div class="row g-4">
+    <div class="col-md-6">
+      {% if produto.imagem %}
+        <img src="{{ produto.imagem.url }}" alt="{{ produto.nome }}" class="img-fluid rounded shadow-sm">
+      {% else %}
+        <div class="d-flex align-items-center justify-content-center bg-secondary text-white rounded" style="height:400px;">
+          Sem imagem
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h2 class="card-title">{{ produto.nome }}</h2>
+          <ul class="list-group list-group-flush my-3">
+            <li class="list-group-item"><strong>Descrição:</strong> {{ produto.descrição }}</li>
+            <li class="list-group-item"><strong>Preço:</strong> R$ {{ produto.preço }}</li>
+          </ul>
+          <h5>Detalhes</h5>
+          <p class="card-text">{{ p.detalhes|linebreaks }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
